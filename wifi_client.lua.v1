@@ -1,0 +1,8 @@
+station_cfg={}
+station_cfg.ssid="xamNayatel"
+station_cfg.pwd="xamnetworks"
+station_cfg.save=true
+wifi.sta.config(station_cfg)
+
+--- Check the IP Address ---
+print(wifi.sta.getip())
