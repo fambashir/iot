@@ -26,17 +26,19 @@ function topic1func(m,pl)
 		elseif pack.cmd == "close" then file.close()
 		elseif pack.cmd == "remove" then file.remove(pack.content)
 		elseif pack.cmd == "run" then dofile(pack.content)
-		elseif pack.cmd == "read" then pubfile(m, pack.content)
+		elseif pack.cmd == "read" then read_distances(5)
 		end
 	end
 end
 
-m_dis["/topic1"]=topic1func
+m_dis[MAP.cmd]=topic1func
 -- Lua: mqtt.Client(clientid, keepalive, user, pass)
 m=mqtt.Client()
 m:on("connect",function(m) 
-	print("connection "..node.heap()) 
-	m:subscribe("/topic1",0,function(m) print("sub done") end)
+	print("connection "..node.heap())
+	dofile("sensor.lua")
+	m:subscribe(MAP.cmd,0,function(m) print("sub done") end)
+
 	end )
 m:on("offline", function(conn)
     print("disconnect to broker...")
@@ -44,5 +46,5 @@ m:on("offline", function(conn)
 end)
 m:on("message",dispatch )
 -- Lua: mqtt:connect( host, port, secure, auto_reconnect, function(client) )
-m:connect("192.168.100.36",1883,0,1)
+m:connect(MQQT.host, MQQT.port, MQQT.secure, MQQT.auto_reconnect)
 

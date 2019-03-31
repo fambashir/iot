@@ -1,7 +1,1 @@
-{
-    "baudrate": "115200",
-    "port": "COM6",
-    "minify": false,
-    "compile": false,
-    "keeppath": false
-}
+{"baudrate": "115200",    "port": "COM5",    "minify": false,    "compile": false,    "keeppath": false}

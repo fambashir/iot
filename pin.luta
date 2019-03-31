@@ -1,0 +1,44 @@
+pin = 0
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("0: ", gpio.read(pin))
+
+pin = 2
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("2: ", gpio.read(pin))
+
+pin = 4
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("4: ", gpio.read(pin))
+
+pin = 5
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("5: ", gpio.read(pin))
+
+pin = 12
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("12: ", gpio.read(pin))
+
+pin = 13
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("13: ", gpio.read(pin))
+
+pin = 14
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("14: ", gpio.read(pin))
+
+pin = 15
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("15: ", gpio.read(pin))
+
+pin = 16
+gpio.mode(pin,gpio.OUTPUT)
+gpio.write(pin,gpio.LOW)
+print("16: ", gpio.read(pin))
